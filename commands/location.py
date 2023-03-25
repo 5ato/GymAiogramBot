@@ -13,7 +13,7 @@ async def get_location(message: types.Message) -> None:
     service = AuthService(session=session)
     user = await service.get_user(str(message.from_id))
     if user:
-        with open('CourseBot/location.json', 'r') as file:
+        with open('location.json', 'r') as file:
             coordinate = json.load(file)
         await message.answer_location(coordinate['lat'], coordinate['lon'], reply_markup=menu)
     else:

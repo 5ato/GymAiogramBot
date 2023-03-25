@@ -49,7 +49,7 @@ async def view_product(message: Message, state: FSMContext) -> None:
 
         menu = ReplyKeyboardMarkup(resize_keyboard=True)\
                .add(KeyboardButton(text='Пропустить'))\
-               .add(KeyboardButton(text='Отменить просмотр'))
+               .add(KeyboardButton(text='Купить Товар'))
 
         await message.answer_photo(
             data['products'][data['count']].image,

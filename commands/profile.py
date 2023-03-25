@@ -31,7 +31,7 @@ async def profile(message: types.Message) -> None:
         menu.add(KeyboardButton(text='Начать регистрацию'))
 
         await message.answer(
-            'Для общения с ботом нужна регистрация'
+            'Для общения с ботом нужна регистрация', reply_markup=menu
         )
         await commands.FSMRegistration.wait_confirmation_state.set()
 
